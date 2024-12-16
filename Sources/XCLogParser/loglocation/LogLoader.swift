@@ -36,6 +36,7 @@ public struct LogLoader {
 
                 return String(cString: charPointer, encoding: .ascii)
             }
+
             guard let contents = string else {
                 throw LogError.readingFile(url.path)
             }
